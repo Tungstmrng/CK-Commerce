@@ -11,7 +11,8 @@ export default function OrderDone() {
     <div className="container page narrow">
       <h1>Thank you! 🎉</h1>
       <p>
-        Your order number is <strong>{orderNo}</strong>. Please keep it for reference.
+        Your order number is <strong>{orderNo}</strong>. Please keep it — you need it, together with your phone number,
+        to track your order.
       </p>
       {state && (
         <div className="card">
@@ -36,7 +37,12 @@ export default function OrderDone() {
           </>
         )}
       </p>
-      <Link className="btn" to="/products">Continue shopping</Link>
+      <div className="btn-row">
+        <Link className="btn" to={`/track?order=${encodeURIComponent(orderNo)}`} state={state?.phone ? { phone: state.phone } : undefined}>
+          Track this order
+        </Link>
+        <Link className="btn ghost" to="/products">Continue shopping</Link>
+      </div>
     </div>
   )
 }

@@ -5,9 +5,11 @@ export default function AdminLayout() {
     <div className="container page">
       <h1>Admin</h1>
       <div className="tabs admin-tabs">
+        <NavLink to="orders">Orders</NavLink>
         <NavLink to="products">Products</NavLink>
         <NavLink to="promotions">Promotions</NavLink>
-        <NavLink to="orders">Orders</NavLink>
+        <NavLink to="shipping">Shipping</NavLink>
+        <NavLink to="sales">Sales</NavLink>
         <NavLink to="settings">Settings</NavLink>
       </div>
       <Outlet />

@@ -5,10 +5,10 @@ const BASE = 'https://api.biteship.com/v1'
 
 // Courier codes sent to Biteship. Edit this list to add/remove couriers
 // (e.g. add "sicepat", "anteraja", "lalamove").
-export const COURIERS = 'gojek,grab,jne,lion,jnt,sicepat,anteraja,lalamove'
+export const COURIERS = 'gojek,grab,jne,lion,jnt'
 
 // Couriers shown under the "Instant" tab. Anything else is "Regular".
-const INSTANT_COMPANIES = ['gojek', 'grab', 'lalamove']
+const INSTANT_COMPANIES = ['gojek', 'grab', 'lalamove', 'borzo']
 const INSTANT_TYPES = ['instant', 'same_day']
 
 function headers() {

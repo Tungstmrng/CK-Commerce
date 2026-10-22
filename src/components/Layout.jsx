@@ -23,7 +23,7 @@ export default function Layout() {
       <header className="header">
         <div className="container header-inner">
           <Link to="/" className="brand">
-            <span className="brand-mark"></span> {settings.store_name}
+            <span className="brand-mark">⚡</span> {settings.store_name}
           </Link>
           <button className="burger" aria-label="Menu" onClick={() => setOpen((o) => !o)}>
             ☰
@@ -31,6 +31,7 @@ export default function Layout() {
           <nav className={`nav ${open ? 'open' : ''}`}>
             <NavLink to="/" end>Home</NavLink>
             <NavLink to="/products">Products</NavLink>
+            <NavLink to="/track">Track order</NavLink>
             {isAdmin && <NavLink to="/admin">Admin</NavLink>}
             {user ? (
               <button className="linklike" onClick={signOut}>Sign out</button>
